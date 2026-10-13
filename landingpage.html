@@ -1,0 +1,270 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Parenting in the Digital Age</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: dark forest hero with tilted book, then light sections: problem, dangers, five-part curriculum, toolkits, final offer. */
+:root{
+  --ground:#f4f7f3; --surface:#ffffff; --tint:#e3eee7; --line:#d3e0d8;
+  --ink:#16251f; --muted:#3f524a; --forest:#0b3d2e; --on-forest:#ffffff; --on-forest-soft:#cdeadc;
+  --gold:#f2a900; --on-gold:#0b3d2e; --coral:#b4360f; --coral-tint:#fde7de; --green:#0f8a62;
+  --btn:#0b3d2e; --on-btn:#ffffff;
+  --display:'Bricolage Grotesque','Trebuchet MS',sans-serif; --body:'DM Sans',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ground:#0b1410; --surface:#13211b; --tint:#14241c; --line:#25392f;
+  --ink:#e8f1ec; --muted:#a9c0b3; --forest:#08261c; --coral:#ff8a5c; --coral-tint:#3a1f16; --green:#3fcf9c;
+  --btn:#f2a900; --on-btn:#0b3d2e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ground:#0b1410; --surface:#13211b; --tint:#14241c; --line:#25392f;
+  --ink:#e8f1ec; --muted:#a9c0b3; --forest:#08261c; --coral:#ff8a5c; --coral-tint:#3a1f16; --green:#3fcf9c;
+  --btn:#f2a900; --on-btn:#0b3d2e; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:20px}
+.stripe{height:14px;background:repeating-linear-gradient(135deg,#f2a900 0 14px,#e4572e 14px 28px,#0f8a62 28px 42px,#fff 42px 56px)}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.btn{display:inline-block;min-height:48px;padding:14px 30px;border-radius:999px;background:var(--btn);color:var(--on-btn);font-weight:700;font-size:18px;text-decoration:none;box-shadow:0 5px 0 rgba(0,0,0,.25);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:var(--gold);color:var(--on-gold)}
+
+/* nav */
+.nav{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding-block:16px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;color:var(--ink)}
+.nav .btn{min-height:44px;padding:10px 22px;font-size:16px;box-shadow:none}
+
+/* hero */
+.hero{background:var(--forest);color:var(--on-forest);overflow:hidden}
+.hero .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-block:56px 80px}
+.hero-copy{flex:1 1 440px;min-width:0}
+.pill{display:inline-block;background:var(--gold);color:#0b3d2e;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:9px 18px;border-radius:999px}
+.hero h1{font-size:clamp(38px,6vw,66px);line-height:1.03;font-weight:800;margin-top:22px}
+.hero .lede{margin-top:22px;font-size:clamp(18px,2.2vw,21px);color:var(--on-forest-soft);max-width:34em}
+.cta-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center}
+.cta-row small{font-size:15px;color:var(--on-forest-soft)}
+.book-stage{flex:1 1 320px;min-width:0;display:flex;justify-content:center;padding-block:24px}
+.book{position:relative;width:min(320px,100%);aspect-ratio:330/460;transform:rotate(4deg);filter:drop-shadow(20px 28px 22px rgba(0,0,0,.45))}
+.book .spine{position:absolute;left:-14px;top:6px;bottom:6px;width:18px;background:#041f16;border-radius:5px 0 0 5px}
+.book .cover{position:absolute;inset:0;border-radius:5px 12px 12px 5px;overflow:hidden;background:#0a5a41;border:3px solid var(--gold);color:#fff}
+.book .band{height:20px;background:repeating-linear-gradient(135deg,#f2a900 0 10px,#e4572e 10px 20px,#fff 20px 30px,#0f8a62 30px 40px)}
+.book .tag{margin:22px 0 0 22px;display:inline-block;background:#0fa070;font-size:11px;font-weight:700;letter-spacing:.16em;padding:6px 12px;border-radius:999px}
+.book .title{margin:14px 22px 0;font-family:var(--display);font-weight:800;font-size:clamp(30px,10vw,40px);line-height:1.02}
+.book .title span{color:var(--gold)}
+.book .blurb{margin:12px 22px 0;font-size:13px;line-height:1.45;color:#c6eedb}
+.book .wifi{position:absolute;right:22px;bottom:76px;width:84px;height:84px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.book .inside{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(255,255,255,.12);border-radius:8px;padding:9px 12px;font-size:12px;line-height:1.35;color:#e4fbf0}
+
+/* sections */
+section{padding-block:80px}
+.intro{max-width:46em}
+.intro .eyebrow{color:var(--coral)}
+.intro h2,.sec-title{font-size:clamp(30px,4.4vw,46px);line-height:1.08;font-weight:800;color:var(--ink);margin-top:12px}
+.intro p{margin-top:20px;color:var(--muted)}
+.dangers{margin-top:36px;display:flex;flex-wrap:wrap;gap:16px}
+.danger{flex:1 1 260px;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.danger svg{display:block}
+.danger h3{margin-top:14px;font-size:20px;line-height:1.2;color:var(--ink)}
+.danger p{margin-top:8px;font-size:16px;color:var(--muted)}
+.warn{margin-top:22px;background:var(--coral-tint);color:var(--ink);border-radius:16px;padding:20px 24px;font-size:17px}
+.learn-bg{background:var(--tint)}
+.learn-bg .eyebrow{color:var(--green)}
+.learn{margin-top:32px;display:flex;flex-direction:column;gap:14px}
+.lesson{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;background:var(--surface);border-radius:20px;padding:24px 26px}
+.lesson .n{flex:0 0 50px;width:50px;height:50px;border-radius:50%;background:var(--forest);color:var(--gold);font-family:var(--display);font-weight:800;font-size:23px;display:flex;align-items:center;justify-content:center}
+.lesson div.t{flex:1 1 380px;min-width:0}
+.lesson h3{font-size:22px;line-height:1.2;color:var(--ink)}
+.lesson p{margin-top:6px;font-size:17px;color:var(--muted)}
+.reassure{background:var(--forest);color:var(--on-forest);border-radius:28px;padding:clamp(28px,5vw,52px);text-align:center}
+.reassure .eyebrow{color:var(--gold)}
+.reassure h2{font-size:clamp(26px,3.8vw,38px);line-height:1.15;margin:14px auto 0;max-width:24em}
+.reassure p{margin:16px auto 0;max-width:36em;color:var(--on-forest-soft);font-size:18px}
+.kits{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+.kit{flex:1 1 320px;min-width:0;display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 20px;font-size:17px;line-height:1.4}
+.kit i{flex:0 0 34px;height:34px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center}
+.kit span{color:var(--muted)}
+.chips{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+.chips div{background:var(--tint);color:var(--ink);font-weight:700;font-size:16px;padding:12px 22px;border-radius:999px}
+.offer{position:relative;background:var(--gold);color:#0b3d2e;border-radius:32px;padding:clamp(32px,6vw,60px) clamp(20px,5vw,48px);text-align:center}
+.offer h2{font-size:clamp(30px,4.6vw,50px);line-height:1.05;font-weight:800;margin:0 auto;max-width:17em;color:#0b3d2e}
+.offer p{margin:16px auto 0;max-width:30em;font-size:19px;color:#33280a}
+.price{margin-top:26px;font-family:var(--display);font-weight:800;font-size:46px;line-height:1}
+.offer .btn{margin-top:20px;background:#0b3d2e;color:#fff;font-size:19px;padding:16px 36px}
+.faq{max-width:46em;margin:28px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+.faq b{display:block;font-size:18px;color:var(--ink)}
+.faq p{margin-top:6px;font-size:16.5px;color:var(--muted)}
+footer{background:var(--forest);color:var(--on-forest-soft);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;padding-block:30px}
+footer b{color:#fff}
+.deal{background:#0b3d2e;color:#fff;font-size:15px}
+.deal[hidden],.offer-clock[hidden]{display:none!important}
+.deal-in{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:center;padding-block:10px;text-align:center}
+.deal b{color:#f2a900}
+.clock{display:inline-flex;gap:6px;font-variant-numeric:tabular-nums}
+.clock i{font-style:normal;display:inline-flex;align-items:baseline;gap:3px;background:rgba(255,255,255,.14);border-radius:8px;padding:3px 9px;font-weight:700;font-size:16px}
+.clock i small{font-size:11px;font-weight:500;letter-spacing:.06em;opacity:.85}
+.offer-clock{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:center;font-weight:700;font-size:16px}
+.offer-clock .clock i{background:#0b3d2e;color:#fff}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+
+<div class="deal" data-deal>
+  <div class="wrap deal-in">
+    <span>Launch price <b>&#8358;5,500</b> ends in</span>
+    <span class="clock" data-clock role="timer" aria-live="off">--</span>
+  </div>
+</div>
+<div class="stripe"></div>
+<div class="wrap nav">
+  <div class="brand">Parenting in the Digital Age</div>
+  <a class="btn" href="https://selar.com/1d311683r5" target="_blank" rel="noopener">Get the guidebook</a>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="pill">For Nigerian parents</span>
+      <h1>Is your child really safe online? Here is how to be sure.</h1>
+      <p class="lede">Spot the warning signs,  Take full control of  every phone and tablet in your home, and raise a respectful, focused child. 15 simple pages written for Nigerian parents.</p>
+      <div class="cta-row">
+        <a class="btn gold" href="https://selar.com/1d311683r5" target="_blank" rel="noopener">Get instant access, &#8358;5,500</a>
+        <small>Instant PDF download. 15 pages. Read on any phone.</small>
+      </div>
+    </div>
+    <div class="book-stage" aria-hidden="true">
+      <div class="book">
+        <div class="spine"></div>
+        <div class="cover">
+          <div class="band"></div>
+          <span class="tag">NIGERIAN EDITION</span>
+          <div class="title">Parenting in the <span>Digital Age</span></div>
+          <div class="blurb">A comprehensive guide for Nigerian parents on protecting kids from online dangers while raising disciplined children.</div>
+          <div class="wifi"><svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#0b3d2e" stroke-width="2.6" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16.2a5 5 0 0 1 6 0"/><circle cx="12" cy="19.6" r="1.2" fill="#0b3d2e"/></svg></div>
+          <div class="inside"><b>Inside:</b> 5 practical sections, printable toolkits, helpline directory</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="intro">
+      <div class="eyebrow">The African parent's dilemma</div>
+      <h2>The village square now fits inside your child's pocket.</h2>
+      <p>Traditional African parenting was rooted in physical presence, communal vigilance and clear moral boundaries. Today, the smartphone has bypassed the village square and delivers unfiltered global influences straight into our children's hands.</p>
+      <p>Many parents swing between two extremes: total paranoia that leads to harsh bans and secret rebellion, or passive indulgence that leaves children defenseless. This guidebook gives you a balanced path in between.</p>
+    </div>
+
+    <h3 class="sec-title" style="font-size:clamp(24px,3vw,30px);margin-top:56px">What your child may be facing right now</h3>
+    <div class="dangers">
+      <div class="danger"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--coral-tint)"/><g fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10l10 18H10z"/><path d="M20 17v5"/></g><circle cx="20" cy="25.2" r=".9" fill="var(--coral)"/></svg><h3>Cyberbullying</h3><p>Toxic WhatsApp group chats, impersonation, public shaming and malicious rumours. Victims often suffer in silence for fear of phone confiscation.</p></div>
+      <div class="danger"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--coral-tint)"/><g fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10l10 18H10z"/><path d="M20 17v5"/></g><circle cx="20" cy="25.2" r=".9" fill="var(--coral)"/></svg><h3>Online grooming and predators</h3><p>Adults in gaming rooms and direct messages pose as peers, build trust, then request explicit photos or physical meetings.</p></div>
+      <div class="danger"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--coral-tint)"/><g fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10l10 18H10z"/><path d="M20 17v5"/></g><circle cx="20" cy="25.2" r=".9" fill="var(--coral)"/></svg><h3>Financial extortion (sextortion)</h3><p>Criminal networks trick teens into sharing private photos, then threaten to expose them to parents, teachers and community members unless they pay.</p></div>
+      <div class="danger"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--coral-tint)"/><g fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10l10 18H10z"/><path d="M20 17v5"/></g><circle cx="20" cy="25.2" r=".9" fill="var(--coral)"/></svg><h3>Cyber-fraud culture</h3><p>Online forums sell "get-rich-quick" schemes and make Yahoo Yahoo look like a legitimate career path for young boys.</p></div>
+      <div class="danger"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--coral-tint)"/><g fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10l10 18H10z"/><path d="M20 17v5"/></g><circle cx="20" cy="25.2" r=".9" fill="var(--coral)"/></svg><h3>Identity theft and doxing</h3><p>Children unknowingly leak home addresses, school locations and family financial details through open profiles and viral surveys.</p></div>
+      <div class="danger"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="var(--coral-tint)"/><g fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10l10 18H10z"/><path d="M20 17v5"/></g><circle cx="20" cy="25.2" r=".9" fill="var(--coral)"/></svg><h3>In-app spending and gambling</h3><p>Monetised games and betting platforms lure youth into micro-transactions and unauthorised use of a parent's debit card.</p></div>
+    </div>
+    <div class="warn"><b>Warning sign:</b> if your child shows explosive anger, emotional withdrawal or physical restlessness whenever internet access is interrupted or devices are reclaimed, they may be showing signs of digital addiction.</div>
+  </div>
+</section>
+
+<section class="learn-bg">
+  <div class="wrap">
+    <div class="eyebrow">Inside the guidebook</div>
+    <h2 class="sec-title">What you will learn</h2>
+    <div class="learn">
+      <div class="lesson"><div class="n">1</div><div class="t"><h3>The Digital Reality in Nigerian Homes</h3><p>Understand today's digital landscape, screen addiction, and how technology influences your child's brain and behaviour.</p></div></div>
+      <div class="lesson"><div class="n">2</div><div class="t"><h3>Major Online Dangers Facing Nigerian Youth</h3><p>Learn how to identify and protect your kids from online scams, cyberbullying, exposure to explicit content and predators.</p></div></div>
+      <div class="lesson"><div class="n">3</div><div class="t"><h3>Technical Safeguards and Privacy Protections</h3><p>Easy, step-by-step technical controls, parental controls and privacy settings for smartphones, tablets and home internet.</p></div></div>
+      <div class="lesson"><div class="n">4</div><div class="t"><h3>Raising Disciplined Children Without Screen Obsession</h3><p>Effective boundaries, screen-free routines and healthy habits that build focus, respect and academic excellence.</p></div></div>
+      <div class="lesson"><div class="n">5</div><div class="t"><h3>Reclaiming Cultural and Moral Character</h3><p>How to instil core Nigerian family values, respect and strength of character in an internet-dominated culture.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="reassure">
+      <div class="eyebrow">Good news</div>
+      <h2>You do not need to be a software engineer to parent a digital child.</h2>
+      <p>You only need clear rules, consistent enforcement and basic technical guardrails. The guidebook explains Google Family Link, Apple Screen Time, privacy checks and WhatsApp settings in plain language.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="intro">
+      <div class="eyebrow" style="color:var(--coral)">Included in your download</div>
+      <h2>Print it. Use it this weekend.</h2>
+      <p>The guidebook comes with ready-to-use toolkits, so you can start the same day you download.</p>
+    </div>
+    <div class="kits">
+      <div class="kit"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><div><b>Family Digital Contract,</b> <span>a ready-to-sign agreement for the whole household</span></div></div>
+      <div class="kit"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><div><b>Diagnostic Quiz,</b> <span>to see how safe your home really is</span></div></div>
+      <div class="kit"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><div><b>Weekend Tech Audit checklist,</b> <span>to review every device in two days</span></div></div>
+      <div class="kit"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><div><b>15 offline activities,</b> <span>to bring back real-life fun</span></div></div>
+      <div class="kit"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><div><b>Age-by-Age Safety Roadmap,</b> <span>so the rules fit each stage of childhood</span></div></div>
+      <div class="kit"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><div><b>30-Day Digital Detox Challenge,</b> <span>for the whole family</span></div></div>
+      <div class="kit"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i><div><b>Cybercrime law guide and helpline directory,</b> <span>for when you need help fast</span></div></div>
+    </div>
+
+    <h3 class="sec-title" style="font-size:clamp(26px,3.4vw,34px);margin-top:56px">Perfect for</h3>
+    <div class="chips">
+      <div>Parents of children and teens</div><div>Guardians and grandparents</div><div>Teachers</div><div>Church and mosque groups</div><div>Parent associations</div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="offer">
+      <h2>Do not wait for a scare. Take back control of the screen in your home.</h2>
+      <p>Instant PDF download. 15 pages, plain language, printable toolkits.</p>
+      <div class="price">&#8358;5,500</div>
+      <div class="offer-clock" data-deal><span>Launch price ends in</span><span class="clock" data-clock role="timer" aria-live="off">--</span></div>
+      <a class="btn" href="https://selar.com/1d311683r5" target="_blank" rel="noopener">Buy now and download instantly</a>
+    </div>
+
+    <h3 class="sec-title" style="font-size:clamp(26px,3.4vw,34px);margin-top:64px;text-align:center">Quick answers</h3>
+    <div class="faq">
+      <div><b>What format is it?</b><p>A 15-page PDF you can download instantly and read on your phone, tablet or computer.</p></div>
+      <div><b>Do I need to be good with technology?</b><p>No. The technical sections are step by step and written in plain language.</p></div>
+      <div><b>Can I print the toolkits?</b><p>Yes. The contract, checklists and challenge are designed to be printed and used at home.</p></div>
+      <div><b>Is it made for Nigerian families?</b><p>Yes. It uses Nigerian examples, local laws such as the Cybercrimes Act, and a Nigerian helpline directory.</p></div>
+    </div>
+  </div>
+</section>
+
+<script>
+/* Fixed offer deadline (Lagos time). Same end time for every visitor. Change this date to extend or end the offer. */
+var OFFER_END = new Date('2026-10-20T23:59:59+01:00').getTime();
+function p2(n){ return n < 10 ? '0' + n : '' + n; }
+function tick(){
+  var ms = OFFER_END - Date.now();
+  var deals = document.querySelectorAll('[data-deal]');
+  if (ms <= 0){ for (var i = 0; i < deals.length; i++) deals[i].hidden = true; return false; }
+  var s = Math.floor(ms / 1000), d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
+  var html = '<i>' + d + '<small>DAYS</small></i><i>' + p2(h) + '<small>HRS</small></i><i>' + p2(m) + '<small>MIN</small></i><i>' + p2(x) + '<small>SEC</small></i>';
+  var clocks = document.querySelectorAll('[data-clock]');
+  for (var j = 0; j < clocks.length; j++) clocks[j].innerHTML = html;
+  return true;
+}
+if (tick()){ var timer = setInterval(function(){ if (!tick()) clearInterval(timer); }, 1000); }
+</script>
+
+<footer>
+  <div class="wrap">
+    <div><b>Parenting in the Digital Age</b> &middot; Nigerian Edition</div>
+    <div>[YOUR NAME OR BRAND] &middot; [YOUR WHATSAPP NUMBER OR EMAIL]</div>
+  </div>
+</footer>
+
+</body></html>
